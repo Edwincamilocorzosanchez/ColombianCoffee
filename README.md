@@ -11,19 +11,21 @@ TAREAS
 
                 Edwin Camilo Corzo Sanchez
 
-Coordinación y Backend Principal
+Funcionalidades Extra y Generación de PDF
 
-Coordinación general: seguimiento de avances, asignación de subtareas, integración final.
+Generador de catálogo PDF usando librerías sugeridas.
 
-Diseño de la base de datos (MER y creación en MySQL).
+Integrar filtros con generación de reportes personalizados.
 
-Implementación del CRUD en C# con Entity Framework.
+Carga y visualización de imágenes (variedades de café).
 
-Autenticación de usuarios y seguridad básica.
+Implementación de lógica de sugerencias inteligentes basadas en criterios agronómicos.
 
-Conexión a la base de datos con patrón Singleton.
+Optimización del código siguiendo SOLID y patrones (Repository, Services).
 
-Documentación técnica del backend.
+Pruebas funcionales de todo el sistema.
+
+
 
 
                 Jose David Solano Rivero
@@ -46,16 +48,16 @@ Documentación de uso del frontend.
                 Dylan Aldiver Rodriguez
 
 
-Funcionalidades Extra y Generación de PDF
+Coordinación y Backend Principal
 
-Generador de catálogo PDF usando librerías sugeridas.
+Coordinación general: seguimiento de avances, asignación de subtareas, integración final.
 
-Integrar filtros con generación de reportes personalizados.
+Diseño de la base de datos (MER y creación en MySQL).
 
-Carga y visualización de imágenes (variedades de café).
+Implementación del CRUD en C# con Entity Framework.
 
-Implementación de lógica de sugerencias inteligentes basadas en criterios agronómicos.
+Autenticación de usuarios y seguridad básica.
 
-Optimización del código siguiendo SOLID y patrones (Repository, Services).
+Conexión a la base de datos con patrón Singleton.
 
-Pruebas funcionales de todo el sistema.
+Documentación técnica del backend.
