@@ -1,3 +1,4 @@
+
 CREATE TABLE especies (
     id_especie INT AUTO_INCREMENT PRIMARY KEY,
     nombre_cientifico VARCHAR(100) NOT NULL,
@@ -16,6 +17,13 @@ CREATE TABLE variedades (
     anio_primer_produccion INT,
     descripcion TEXT,
     FOREIGN KEY (id_especie) REFERENCES especies(id_especie)
+);
+
+CREATE TABLE sinonimos_variedades (
+    id_sinonimo INT AUTO_INCREMENT PRIMARY KEY,
+    id_variedad INT NOT NULL,
+    nombre_sinonimo VARCHAR(100) NOT NULL,
+    FOREIGN KEY (id_variedad) REFERENCES variedades(id_variedad)
 );
 
 CREATE TABLE paises (
@@ -54,7 +62,6 @@ CREATE TABLE caracteristicas_agronomicas (
     FOREIGN KEY (id_variedad) REFERENCES variedades(id_variedad)
 );
 
-
 CREATE TABLE produccion_por_hectarea (
     id_produccion INT AUTO_INCREMENT PRIMARY KEY,
     id_variedad INT NOT NULL,
@@ -73,7 +80,6 @@ CREATE TABLE breeders (
     pais VARCHAR(100)
 );
 
-
 CREATE TABLE breeders_variedad (
     id_variedad INT,
     id_breeder INT,
@@ -82,11 +88,17 @@ CREATE TABLE breeders_variedad (
     FOREIGN KEY (id_breeder) REFERENCES breeders(id_breeder)
 );
 
-
 CREATE TABLE atributos_sensoriales (
     id_atributo INT AUTO_INCREMENT PRIMARY KEY,
     id_variedad INT NOT NULL,
     puntaje_sca DECIMAL(4,1), 
     atributos TEXT, 
+    FOREIGN KEY (id_variedad) REFERENCES variedades(id_variedad)
+);
+
+CREATE TABLE atributos_taza (
+    id_atributo_taza INT AUTO_INCREMENT PRIMARY KEY,
+    id_variedad INT NOT NULL,
+    atributo VARCHAR(100) NOT NULL,
     FOREIGN KEY (id_variedad) REFERENCES variedades(id_variedad)
 );
