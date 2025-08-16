@@ -99,6 +99,13 @@ CREATE TABLE atributos_sensoriales (
 CREATE TABLE atributos_taza (
     id_atributo_taza INT AUTO_INCREMENT PRIMARY KEY,
     id_variedad INT NOT NULL,
-    atributo VARCHAR(100) NOT NULL,
+    fragancia_aroma DECIMAL(3,2),
+    sabor DECIMAL(3,2),
+    sabor_residual DECIMAL(3,2),
+    acidez DECIMAL(3,2),
+    cuerpo DECIMAL(3,2),
+    balance DECIMAL(3,2),
+    puntaje_global DECIMAL(4,1),
+    notas TEXT,
     FOREIGN KEY (id_variedad) REFERENCES variedades(id_variedad)
 );
